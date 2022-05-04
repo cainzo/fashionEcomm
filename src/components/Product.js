@@ -5,6 +5,7 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+
 const Info = styled.div`
   opacity: 0;
   width: 100%;
@@ -14,15 +15,16 @@ const Info = styled.div`
   left: 0;
   background-color: #00000021;
   z-index: 3;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 `;
 const Container = styled.div`
   flex: 1;
   margin: 5px;
-  min-width: 22%;
+  width: 280px;
   height: 350px;
   display: flex;
   align-items: center;

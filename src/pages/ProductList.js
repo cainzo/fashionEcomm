@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import NavigationBar from '../components/NavigationBar';
 import Newsletter from '../components/Newsletter';
 import Products from '../components/Products';
+import { mobile } from '../responsive';
 
 
 
@@ -23,8 +24,10 @@ const FilterContainer = styled.div`
 `;
 
 const Filter = styled.div`
-    margin-right: 20px;
+    margin: 20px;
     padding: 10px;
+  ${mobile({margin: "0"})}
+
 `;
 const FilterText = styled.span`
     font-size: 20px;
@@ -34,6 +37,8 @@ const FilterText = styled.span`
 const Select = styled.select`
 padding: 5px;
 margin-right:20px;
+${mobile({margin: "0px 5px"  })}
+
 `;
 const Option = styled.option`
     font-weight: bold;
@@ -56,7 +61,7 @@ const ProductList = () => {
                         <Option>Yellow</Option>
                         <Option>Green</Option>
                     </Select>
-                    <Select>
+                    <Select >
                         <Option disabled selected>Size</Option>
                         <Option>XS</Option>
                         <Option>S</Option>
@@ -66,8 +71,8 @@ const ProductList = () => {
                         <Option>XXL</Option>
                     </Select>
                 </Filter>
-                <Filter>
-                <FilterText>Sort Products</FilterText>
+                <Filter style={{textAlign: "end"}}>
+                <FilterText >Sort Products</FilterText>
                 <Select>
                         <Option disabled selected>Newest</Option>
                         <Option>Price(asc)</Option>

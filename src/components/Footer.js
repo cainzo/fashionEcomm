@@ -9,20 +9,23 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
+  height: fit-content;
   display: flex;
- 
+  ${mobile({flexDirection: "column"})}
+  
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
-
+  align-items: center;
 `;
 
 const Logo = styled.h1`
@@ -30,9 +33,15 @@ const Logo = styled.h1`
 `;
 const Description = styled.p`
   margin: 20px 0px;
+  width: 50%;
+  text-align: center;
 `;
 const SocialContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
 `;
 const SocialIcon = styled.div`
   width: 40px;
@@ -43,12 +52,17 @@ const SocialIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
 `;
 
 const Center = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 10px;
+  ${mobile({display: "none"})}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -68,7 +82,14 @@ const ListItem = styled.li`
 
 const Right = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  ${mobile({ backgroundColor: "#c4b7b728"})}
+
 `;
 const ContactItem = styled.div`
     margin-bottom: 20px;
@@ -86,8 +107,7 @@ const Footer = () => {
         <Logo>G/C</Logo>
         <Description>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
-          beatae nam culpa deserunt aperiam consequuntur fuga eligendi maiores
-          cumque. Voluptates quis numquam minus accusantium est.
+          beatae nam culpa deserunt aperiam consequuntur fuga.
         </Description>
         <SocialContainer>
           <SocialIcon color="3B5999">
