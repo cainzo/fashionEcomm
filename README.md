@@ -1,8 +1,26 @@
+# E-commerse Front-end responsive:
+    start the project with:  npm start
+    
+    ReactJs | JS | Styled-Components
+### Libreries
 
-#front end
+* npm install @mui/icons-material 
+* npm install @mui/material
+* npm install --save styled-components
 
--npm i --save @fortawesome/fontawesome-svg-core
--npm i --save @fortawesome/free-solid-svg-icons
--npm i --save @fortawesome/free-regular-svg-icons
--npm i --save @fortawesome/react-fontawesome@latest
--npm install @mui/icons-material npm install @mui/material
+
+## Pages
+
+### Home
+### Login
+### Products
+### Product
+### Login
+### Reg
+### Cart
+
+# API Back end:
+    To-do
+    
+    MongoDB | NodeJs
+
