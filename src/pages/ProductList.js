@@ -50,7 +50,7 @@ const ProductList = () => {
     const value = e.target.value;
     setFilter({
         ...filter,
-      [e.target.name]: value,
+      [e.target.name]: value.toLowerCase(),
     });
   };
 
@@ -59,7 +59,7 @@ const ProductList = () => {
     <Container>
       <NavigationBar></NavigationBar>
       <Announcement></Announcement>
-      <Title>Dresses</Title>
+      <Title>{cat.toUpperCase()}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products</FilterText>
@@ -89,7 +89,7 @@ const ProductList = () => {
         <Filter style={{ textAlign: "end" }}>
           <FilterText>Sort Products</FilterText>
           <Select onChange={(e)=>setSort(e.target.value)}>
-            <Option value="newest" >Newest</Option>
+            <Option value="newest">Newest</Option>
             <Option value="asc">Price(asc)</Option>
             <Option value="desc">Price(desc)</Option>
           </Select>
